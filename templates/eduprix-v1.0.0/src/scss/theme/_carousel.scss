@@ -1,0 +1,100 @@
+// //*----------------------------- from bootstrap carousel ------------------*//
+
+@include media-breakpoint-up(xl) {
+  .carousel-control-prev{
+    left: 119px !important;
+    right: 0 !important;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .carousel-control-prev{
+    left: 156px !important;
+    right: 0 !important;
+  }
+}
+
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  left: 5%;
+  padding-bottom: 1.6rem;
+  color: #fff;
+  text-align: center;
+  @include media-breakpoint-up(xxl) {
+    bottom: 4.2rem;
+  }
+}
+
+.carousel-indicators.custom-indicators{
+  margin-bottom: .3rem;
+}
+
+.carousel-indicators {
+  [data-bs-target]{
+    background-color: $secondary !important;
+    opacity: 1;
+    &.active{
+      background-color: $primary !important;
+    }
+  }
+  margin:  0;
+  .active {
+    opacity: $carousel-indicator-active-opacity;
+    border-radius: 0;
+    width: 64px;
+  }
+}
+
+.bg-carousel-soft-primary{
+  position: absolute ;
+  background: linear-gradient(rgba(34, 87, 191, 0.25));
+  width:172px;
+  font-size: 4.768371582rem;
+  opacity: 0.5;
+  font-weight: 700;
+  color: $primary;
+}
+
+.course-logo{
+  position: absolute;
+  left: 34px;
+  transform: translate(-50%, -50%);
+}
+
+.slider-rectangle{
+  position: absolute;
+  left: -46px;
+  top: 45%;
+}
+
+
+
+
+.hero-carousel-container{
+  padding: 0;
+  @include media-breakpoint-up(xl) {
+    padding: 0 125px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding: 0 225px;
+  }
+}
+
+
+.hero-slider-counter{
+  position: absolute;
+  left: 37px;
+  top: 17%;
+}
+
+.hero-social-icons{
+  position: absolute;
+  right: 0;
+  top: -44px;
+}
+
+
+
+

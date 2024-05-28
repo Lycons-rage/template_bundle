@@ -1,0 +1,19 @@
+mixin Cta 
+  +Section.bg-soft-primary
+    .row.flex-center
+      .col-lg-5.col-xl-4
+        img.w-100(src=`${CWD}assets/img/illustrations/cta.png` alt='...' )
+      .col-lg-5.col-xl-4 
+        h1.fw-normal.text-secondary.mb-4 Get Regular 
+          br
+          | Updates from
+        img(src=`${CWD}assets/img/logos/logo-footer.png` height="75" alt='...' )
+
+        h5.text-secondary.fw-normal.my-3 SUBSCRIBE TO NEWSLETTER  
+        form.row.gx-2.gy-2.align-items-center
+          .col
+            .input-group-icon
+              label.visually-hidden(for='inputEmailCta') Address
+              input.form-control#inputEmailCta.input-box.form-eduprix-control.text-light(type='email' placeholder='Email')
+          .d-grid
+            button.btn.btn-secondary(type='submit') Subscribe

@@ -1,0 +1,30 @@
+/*-----------------------------------------------
+|   Backgrounds
+-----------------------------------------------*/
+.bg-holder {
+  @include media-breakpoint-up(sm) {
+    right: -2rem;
+    top: -14rem !important;
+  }
+
+  @include media-breakpoint-up(md) {
+    right: -14rem;
+    top: -6rem !important;
+  }
+
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  will-change: transform,
+  opacity,
+  filter;
+  right: 0rem;
+  top: -16rem !important;
+  ;
+  backface-visibility: hidden;
+  background-repeat: no-repeat;
+  z-index: 0;
+}

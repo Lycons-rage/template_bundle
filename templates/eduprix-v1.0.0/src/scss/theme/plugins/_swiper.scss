@@ -1,0 +1,56 @@
+.swiper-pagination-bullet {
+  height: 11px !important;
+  width: 11px !important;
+  border-radius: 0 !important;
+  background: $secondary !important;
+  opacity: 1 !important;
+}
+.bullet-active{
+  height: 11px !important;
+  width: 64px !important;
+  border-radius: 0 !important;
+  background-color: $primary !important;
+}
+
+.swiper-button-prev{ 
+  left: -24px  !important;
+}
+.swiper-button-next{ 
+  right: -24px !important; 
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  content: "" !important;
+}
+
+.swiper-custom-container {
+  position: relative;
+}
+
+
+@media (min-width: 600px) {
+  .swiper-custom-container  {
+    margin-left: auto;
+    margin-right: auto;
+    width: 92%;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
+@media (min-width:700px) {
+  .swiper-custom-container  {
+    width: 95%;
+  }
+}
+
+.swiper-wrapper {
+  margin-bottom: 3rem;
+  width: 73.8%;
+}
+@media (min-width: 37.5em) {
+  .swiper-wrapper {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,38 @@
+append variables
+  -
+    var funfacts= [
+      {
+
+        image:'top-course.png',
+        number: '1257',
+        title : `Top <br> Courses`,
+        text: `Take courses from the world’s best <br> instructors and universities. `,
+      },
+      {
+        image:'happy-learners.png',
+        number: '99981',
+        title : `Happy <br> Learners`,
+        text: `Learners from all around <br>  the world.`,
+      },
+      {
+        image:'instructors.png',
+        number: '578',
+        title :`Eminent <br> Instructors`,
+        text:`Learn your favourite course with <br>  world-class instructors. `,
+      },
+
+    ];
+
+mixin Fun(config)
+  .col-12.col-md-6.col-lg-3.text-center.mb-5.mb-lg-0
+    img.mb-5(src=`${CWD}assets/img/illustrations/${config.image}` height="140" alt="rectangle")
+    h1.text-secondary=config.number
+    h1.fw-normal.text-secondary!=config.title
+    p!=config.text
+
+mixin Funfacts
+  +Section.bg-soft-primary
+    .row.flex-center
+      each item in funfacts
+        +Fun(item)
+

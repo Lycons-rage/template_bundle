@@ -1,0 +1,21 @@
+mixin TopNav
+  section(class="py-3" style="background-color:#10203F;")
+    .container#topNav
+      .row.justify-content-between
+        .col-auto
+          a.navbar-brand(href='index.html')
+            img(src=`${CWD}assets/img/logos/logo.png`   width="141"  alt='logo')
+
+        .col-auto.order-2.d-none.d-sm-block
+          a.nav-link(href='#!') 
+            i.fas.fa-user.text-info.me-2
+       
+        .col-auto.d-none.d-lg-block
+          .d-flex.align-items-center
+            p.mb-0.me-3.text-primary.text-end.fw-bolder.lh-1.opacity-50 SEARCH 
+              br
+              |ANYTHING
+            form
+              .input-group.d-flex.flex-end-center
+                input#formGroupExampleInput.form-control.form-eduprixsearch-control.rounded-pill(type='text' placeholder='Ex: Modern Art' )
+                img(src=`${CWD}assets/img/illustrations/search.png` width="36" alt='').input-box-icon  

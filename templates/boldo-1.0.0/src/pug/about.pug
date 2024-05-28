@@ -1,0 +1,27 @@
+extends layouts/LayoutTheme
+include mixins/about/Hero
+include mixins/about/Gallery
+include mixins/about/Numbers
+include mixins/about/Team
+include mixins/about/Values
+
+
+
+append variables
+  -
+    var pageInfo = {
+      pageTitle: 'About',
+    }
+
+
+append styles
+
+prepend scripts
+
+
+block content
+  +Hero
+  +Gallery
+  +Numbers
+  +Team
+  +Values

@@ -1,0 +1,8 @@
+mixin ThemeStyle
+  if dir !== 'rtl'
+    link(href=`assets/css/theme${ENV === 'PROD'? '.min': ''}.css`, rel='stylesheet')
+    link(href=`assets/css/user${ENV === 'PROD'? '.min': ''}.css`, rel='stylesheet')
+  else
+    link(href=`assets/css/theme-rtl${ENV === 'PROD'? '.min': ''}.css`, rel='stylesheet')
+    link(href=`assets/css/user-rtl${ENV === 'PROD'? '.min': ''}.css`, rel='stylesheet')
+  = '\n'

@@ -1,0 +1,47 @@
+extends Layout
+include ../mixins/Variables
+include ../mixins/Shared/Navbar
+include ../mixins/Shared/Footer
+include ../mixins/Shared/Promo
+
+
+append variables
+  - var attrsBody = {  };
+  - var breakPoint = 'lg';
+  - var darkNavbar = true;
+  -
+    var pageInfo = {
+      pageTitle: 'Home',
+      pageSubtitle: '',
+    }
+
+append title
+  title= `${pageInfo.pageTitle === 'Home' ? 'Boldo' : pageInfo.pageTitle} | ${pageInfo.pageSubtitle || 'Boldo Agency Template'}`
+
+append headScripts
+
+block prepend styles
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet")
+  link(href=`${CWD}vendors/prism/prism.css`, rel='stylesheet')
+  link(href=`${CWD}vendors/swiper/swiper-bundle.min.css`, rel='stylesheet')
+
+
+
+prepend scripts
+  script(src=`${CWD}vendors/fontawesome/all.min.js`)
+  script(src=`${CWD}vendors/lodash/lodash.min.js`)
+  script(src=`https://polyfill.io/v3/polyfill.min.js?features=window.scroll`)
+  script(src=`${CWD}vendors/prism/prism.js`)
+  script(src=`${CWD}vendors/swiper/swiper-bundle.min.js`)
+
+
+block mainContent
+  //- .cursor-inner
+  +Navbar(darkNavbar, pageInfo.pageTitle)
+
+  block content
+
+block afterMainContent
+  +Promo
+  +Footer

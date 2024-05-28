@@ -1,0 +1,67 @@
+mixin Heroheader
+  .py-7.py-sm-8.py-lg-10.py-xxl-9.py-xxl-11(style="background-color:#10203F;")
+  section.mb-n9.mb-lg-n11.p-0(style="transform: translateY(calc(-50% - 25px));")
+    .container-fluid       
+      .position-relative.hero-carousel-container#heroCarouselContainer  
+        .position-absolute.translate-middle.d-none.d-xxl-block
+          img(src=`${CWD}assets/img/illustrations/bg-circle.png` alt='')
+        .position-absolute.top-0.d-none.d-lg-block(style="right: -16px;")
+          .bg-carousel-soft-primary.position-relative#heroSlidercounterContainer
+            #heroSlidercounter.hero-slider-counter  01  
+        #hero-carousel.carousel.slide(data-bs-ride='carousel')
+          .slider-rectangle.z-index-2.d-none.d-xxl-block
+            img(src=`${CWD}assets/img/gallery/rectangle-s.png` alt='')
+          .position-relative
+            .hero-social-icons.d-none.d-lg-block
+              ul.list-unstyled.list-inline
+                li.list-inline-item.mr-2
+                  a.text-decoration-none(href='#!')
+                    img.list-social-icon(src=`${CWD}assets/img/icons/instagram.png` width="30"  alt='...')
+                li.list-inline-item.mr-2
+                  a.text-decoration-none(href='#!')
+                    img.list-social-icon(src=`${CWD}assets/img/icons/facebook.png` width="30"  alt='...')
+                li.list-inline-item.mr-2
+                  a.text-decoration-none(href='#!')
+                    img.list-social-icon(src=`${CWD}assets/img/icons/twitter.png` width="30" alt='...') 
+            .carousel-inner#heroCarouselInner
+              .carousel-item.active
+                img.d-block.w-100(src=`${CWD}assets/img/gallery/header-slider-1.png` height="447" alt='...')
+                .carousel-caption.d-none.d-sm-block
+                  h1.display-4.text-light.text-start.fw-light.fs-2.fs-md-3.fs-lg-4.fs-xl-5 We 
+                    strong empower 
+                    |you 
+                    br
+                    | to learn what you love.
+              .carousel-item
+                img.d-block.w-100(src=`${CWD}assets/img/gallery/header-slider-2.png` height="447" alt='...')
+                .carousel-caption.d-none.d-sm-block
+                  h1.display-4.text-light.text-start.fw-light 
+                    strong An extensive Archieve for you to 
+                    br.d-none.d-xxl-block
+                    | explore the many areas of knowledge.
+              .carousel-item
+                img.d-block.w-100(src=`${CWD}assets/img/gallery/header-slider-3.png` height="447" alt='...')
+                .carousel-caption.d-none.d-sm-block
+                  h1.display-4.text-light.text-start.fw-light  Learn how to
+                    strong  express yourself 
+                    br
+                    | artistically via engaging courses.
+          .row.g-0
+            .col-3.position-relative 
+              .carousel-indicators.justify-content-start.custom-indicators
+                button.active(type='button' data-bs-target='#hero-carousel' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+                button(type='button' data-bs-target='#hero-carousel' data-bs-slide-to='1' aria-label='Slide 2')
+                button(type='button' data-bs-target='#hero-carousel' data-bs-slide-to='2' aria-label='Slide 3') 
+            .col-9.position-relative
+              .card(style="background-color:#2257BF;")
+                .card-body.border-bottom.border-primary.p-2.px-md-4.py-md-3.py-xl-4.p-sm-3
+                  .d-md-flex.flex-between-center 
+                    p.mb-0.text-primary.fs-2
+                      strong 250,998 
+                      |people are learning with us
+                    a.text-decoration-none.text-light.fw-bold(href='#!' role='button')
+                      | LEARN MORE
+                      svg.bi.bi-arrow-right.text-primary.ms-2(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='currentColor' viewBox='0 0 16 16')
+                        path(fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z')
+
+                         

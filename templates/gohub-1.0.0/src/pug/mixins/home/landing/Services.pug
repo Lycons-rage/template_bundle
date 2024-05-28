@@ -1,0 +1,50 @@
+append variables
+  -
+    var features= [
+      {
+        icon:`1.png`,
+        title:'Be visible to "like',
+        alt: 'Dashboard',
+        details: 'Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!'
+      },
+      {
+        icon:`2.png`,
+        title:'Monitor Online',
+        alt: 'Comment',
+        details: 'The platform has multiple functionalities and key features. With our intelligent system, you can approve bookings and monitor everything in your business online.'
+      },
+      {
+        icon:`3.png`,
+        title:'More Income',
+        alt: 'Tailored',
+        details: 'Being on a digital platform is another sales channel added to strengthen your business. With our insights tools, we analyze your gears performance in any season.'
+      }
+    ];
+    var texting= [
+      {
+        title: 'Improve the stability of your application',
+        alt: 'text',
+        details: 'Bugsnag monitors application stability, so you can make data-driven decisions on whether you should be building new features, or fixing bugs.'
+      }
+    ]
+mixin FeatureItem(item) 
+  .col-md-6
+    .w-100.h-100.p-5.services-card-shadow.rounded-4
+      img(src=`${CWD}assets/img/icons/${item.icon}` alt=`${item.alt}` style={width:'95px'})
+      h3.mt-3.lh-base #{item.title}
+      p.mb-0 #{item.details}
+mixin Card(text)
+  .col-md-6.h-100.text-center.text-md-start.p-0.p-md-5.pb-3
+    h2.mt-3 #{text.title}
+    p.mb-0 #{text.details}
+        
+mixin Services
+  +Section#product
+    .row.mb-4
+      +Card(texting[0]) 
+      +FeatureItem(features[0]) 
+    .row.mb-4
+      +FeatureItem(features[1]) 
+      +FeatureItem(features[2])
+
+

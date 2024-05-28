@@ -1,0 +1,86 @@
+append variables
+  -
+    var explore= [
+      {
+        logo:'data-science.png',
+        hoverlogo:'data-science.svg',
+        title :'Data Science',
+        text: '78 Courses',
+        bg:'bg-soft-secondary',
+      },
+      {
+        logo:'business.png',
+        hoverlogo:'business.svg',
+        title :'Business & Management',
+        text: '67 Courses',
+        bg:'bg-soft-primary',
+      },
+      {
+        logo:'language.png',
+        hoverlogo:'language.svg',
+        title :'Language',
+        text: '85 Courses',
+        bg:'bg-soft-primary',
+      },
+      {
+        logo:'information.png',
+        hoverlogo:'information.svg',
+        title :'Information Technology',
+        text: '98 Courses',
+        bg:'bg-soft-primary',
+      },
+      {
+        logo:'film.png',
+        hoverlogo:'film.svg',
+        title :'Modernism in Oriental Art',
+        text: '68 Courses',
+        bg:'bg-soft-primary',
+      },
+      {
+        logo:'math.png',
+        hoverlogo:'math.svg',
+        title :'Compositions in Visual Art',
+        text: '878 Courses',
+        bg:'bg-soft-primary',
+      },
+      {
+        logo:'health.png',
+        hoverlogo:'health.svg',
+        title :'Health & Medical',
+        text: '79 Courses',
+        bg:'bg-soft-primary',
+      },
+      {
+        logo:'design.png',
+        hoverlogo:'design.svg',
+        title :'Design & Creative',
+        text: '37 Courses',
+        bg:'bg-soft-primary',
+      },
+    ];
+
+
+mixin Explore(config)
+  .col-sm-6.col-lg-3
+    .card.card-hover.h-100
+      .card-body.d-flex.align-items-center.px-4.px-lg-2.px-xl-4
+        .d-flex.align-items-center
+          .icon-box
+            img.eduprix-icon(src=`${CWD}assets/img/icons/${config.logo}` alt='explore')
+            img.eduprix-icon-hover(src=`${CWD}assets/img/icons/${config.hoverlogo}` alt='explore')
+          .flex-grow-1.ms-3
+            h4.fs-lg-1.text-light.mb-0=config.title
+            a.stretched-link.explore-link(href='#!')=config.text
+           
+mixin ExploreEduprix
+  +Section.bg-secondary
+    .row.g-3
+      h1.header-title-explore.display-4.header.text-start.mb-5  EXPLORE EDUPRIX
+      +Explore(explore[0])
+      +Explore(explore[1])
+      +Explore(explore[2])
+      +Explore(explore[3])
+      +Explore(explore[4])
+      +Explore(explore[5])
+      +Explore(explore[6])
+      +Explore(explore[7])

@@ -1,0 +1,76 @@
+mixin Reviews
+    -
+        var reviews = [
+            {
+                description:"“Buyer buzz partner network disruptive non-disclosure agreement business”",
+                name:"Albus Dumbledore",
+                designation:"Manager @ Howarts",
+                avatar:`${CWD}assets/img/review/1.png`
+            },
+            {
+                description:"“Learning curve infrastructure value proposition advisor strategy user experience hypotheses investor.”",
+                name:"Severus Snape",
+                designation:"Manager @ Slytherin",
+                avatar:`${CWD}assets/img/review/2.png`
+            },
+            {
+                description:"“Release facebook responsive web design business model canvas seed money monetization.”",
+                name:"Harry Potter",
+                designation:"Team Leader @ Gryffindor",
+                avatar:`${CWD}assets/img/review/3.png`
+            },
+            {
+                description:"“Buyer buzz partner network disruptive non-disclosure agreement business”",
+                name:"Albus Dumbledore",
+                designation:"Manager @ Howarts",
+                avatar:`${CWD}assets/img/review/1.png`
+            },
+        ]
+    +Section.bg-dark.pt-6
+        .col-md-6
+            h1.text-white.fs-lg-5.fs-md-3.fs-2 An enterprise template to ramp up your company website
+        .swiper.mt-7
+            .swiper-container.swiper-theme(data-swiper!={
+                slidesPerView: 1,
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    1025: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    },
+                },
+                spaceBetween: 10,
+                grabCursor: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                loop: true,
+                freeMode: true,
+                loopedSlides: 3,
+            })
+                .swiper-wrapper
+                    each review in reviews
+                        .swiper-slide.bg-white.p-5.rounded-3.h-auto
+                            .d-flex.flex-column.justify-content-between.h-100
+                                h4.text-black= review.description
+                                .d-flex.align-items-center.gap-3.mt-5
+                                    img(src=review.avatar, alt="")
+                                    .text-black
+                                        p.mb-0.fw-bold.text-dark= review.name
+                                        small= review.designation
+            .swiper-button-next
+                span.fas.fa-arrow-right.fs-lg-3.fs-2
+            .swiper-button-prev
+                span.fas.fa-arrow-left.fs-lg-3.fs-2

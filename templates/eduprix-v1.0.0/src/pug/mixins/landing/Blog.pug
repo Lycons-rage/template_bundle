@@ -1,0 +1,74 @@
+append variables
+  -
+    var blogs= [
+      {
+        image:'art-craft.png',
+        category:`Art`,
+        date:'23 Nov 2021',
+        title:'The limits between art and craft',
+      },
+      {
+        image:'art-lovers.png',
+        category:`Info.Tech`,
+        date:'24 Nov 2021',
+        title:'8 guidelines for art lovers',
+      },
+      {
+        image:'statistics.png',
+        category:`Mathmatics`,
+        date:'25 Nov 2021',
+        title:'The Importance of Statistic',
+      },
+      {
+        image:'color-theory.png',
+        category: `Design`,
+        date:'26 Nov 2021',
+        title:'The Fundamentals of Color Theory',
+      },
+      {
+        image:'writing-tips.png',
+        category: `Art`,
+        date:'27 Nov 2021',
+        title:'Excellent short tale writing tips',
+      },
+      {
+        image:'classroom.png',
+        category: `Education`,
+        date:'28 Nov 2021',
+        title:'Make your Classroom a Community',
+      },
+      {
+        image:'collectives.png',
+        category: `Art`,
+        date:'29 Nov 2021',
+        title:'Five Turner chosen art collectives',
+      },
+      {
+        image:'artistic.png',
+        category: `Art`,
+        date:'30 Nov 2021',
+        title:'The artistic highlights of the week',
+      },
+      
+    ];
+
+mixin Blog(config)
+  .col-sm-6.col-md-4.col-lg-3.mb-4
+    .card.border-100.h-100.shadow 
+      .card-body.p-4.h-100
+        img.w-100(src=`${CWD}assets/img/gallery/${config.image}`  alt='')
+        .d-flex.justify-content-between.mt-3.border-bottom.border-100.py-2
+          span.badge.bg-soft-info.rounded-1.text-info.fw-normal.p-2=config.category
+          p.mb-0.text-500=config.date
+        h3.fw-normal.fs-lg-1.fs-xxl-2.lh-sm.mt-3=config.title
+        a.text-secondary.stretched-link(href='#!') Full Article
+
+mixin Blogs
+  +Section.pt-0
+    .row
+      .col-12
+        .mb-6
+          h1.header-title.display-4.header.text-center RECENT BLOGPOST
+        .row
+          each item in blogs
+            +Blog(item)

@@ -1,0 +1,22 @@
+append variables
+  - var points = ['Specific access/rights by users', 'Physical and virtual Mastercards with adjestable payment limits', 'Dashboards to follow-up on your expenses']
+  - var values = ['Unlimited history', 'REad-only access for your accountant', 'Plug-and-play for accounting tools']
+mixin Autopilot2
+  section.py-5
+      .container#auto
+        .row.align-items-center
+          .col-md-6.text-md-start
+            h4.fs-2.fw-normal Monitor your expenses
+            ul.list-unstyled.py-3
+              each point in points     
+                li.mb-3.text-900
+                  span.far.fa-check-circle.text-700.me-2
+                  =point 
+          .col-md-6.mt-4.mt-md-0.text-start
+            h4.fs-2.fw-normal Make accounting easier
+            ul.list-unstyled.py-3
+              each value in values      
+                li.mb-3.text-900
+                  span.far.fa-check-circle.text-700.me-2
+                  =value 
+          

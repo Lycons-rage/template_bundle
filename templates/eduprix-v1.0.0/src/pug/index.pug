@@ -1,0 +1,34 @@
+extends layouts/LayoutTheme
+include mixins/landing/Heroheader
+include mixins/landing/TopCourse
+include mixins/landing/ExploreEduprix
+include mixins/landing/StudentReview
+include mixins/landing/FunFacts
+include mixins/landing/Instructors
+include mixins/landing/Blog
+include mixins/landing/Cta
+include mixins/landing/Footer
+
+append styles
+  link(href=`${CWD}vendors/swiper/swiper-bundle.min.css`, rel='stylesheet')
+
+prepend scripts
+  script(src=`https://polyfill.io/v3/polyfill.min.js?features=window.scroll`)
+  script(src=`${CWD}vendors/fontawesome/all.min.js`)
+  script(src=`${CWD}vendors/swiper/swiper-bundle.min.js`)
+ 
+append footerStyles
+  link(href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet")
+
+
+block content 
+  +TopNav
+  +Heroheader
+  +TopCourse
+  +ExploreEduprix
+  +StudentReview
+  +Funfacts
+  +Instructors
+  +Blogs
+  +Cta 
+  +PreFooter 

@@ -1,0 +1,22 @@
+extends layouts/LayoutTheme
+include mixins/blog/BlogHero
+include mixins/blog/AllBlogs
+
+
+
+append variables
+  - var darkNavbar = false;
+  -
+    var pageInfo = {
+      pageTitle: 'Blogs',
+    }
+
+
+append styles
+
+prepend scripts
+
+
+block content
+  +BlogHero
+  +AllBlogs

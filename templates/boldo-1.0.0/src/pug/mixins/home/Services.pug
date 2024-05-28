@@ -1,0 +1,30 @@
+mixin Services
+    -
+        var services = [
+            {
+                img:`${CWD}assets/img/services/1.png`,
+                title:"Cool feature title",
+                description:"Learning curve network effects return on investment."
+            },
+            {
+                img:`${CWD}assets/img/services/2.png`,
+                title:"Even cooler feature",
+                description:"Learning curve network effects return on investment."
+            },
+            {
+                img:`${CWD}assets/img/services/3.png`,
+                title:"Cool feature title",
+                description:"Learning curve network effects return on investment."
+            }
+        ]
+    +Section
+        p.text-center.fs-1 Our Services
+        h2.mx-auto.text-center.fs-lg-6.fs-md-5.w-lg-75 Handshake infographic mass market crowdfunding iteration.
+        .row.gx-xl-7.mt-5
+            each service in services
+                .col-md-4.mb-6.mb-md-0.text-center.text-md-start
+                    img(src=`${service.img}`, alt="").w-50.w-md-100
+                    h4.mt-3.my-1= service.title
+                    p.fs-1.mb-0= service.description
+                    a(href="#").text-dark.fs-1.pb-2.fw-bold.border-black.border-bottom.text-decoration-none Explore page
+                        i.fa-solid.fa-arrow-right.ms-2

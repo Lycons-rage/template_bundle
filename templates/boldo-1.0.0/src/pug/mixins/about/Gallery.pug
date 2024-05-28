@@ -1,0 +1,10 @@
+mixin Gallery
+  +Section.pb-0
+    .gallery-wraper
+      each singleImg in [`${CWD}assets/img/gallery/1.png`,`${CWD}assets/img/gallery/2.png`,`${CWD}assets/img/gallery/3.png`,`${CWD}assets/img/gallery/4.png`,`${CWD}assets/img/gallery/5.png`]
+        .img-wraper
+          img(src=singleImg, alt="").img-fluid
+    .px-xl-8.px-md-5.px-3.py-8
+      p.fs-1 Our Story
+      h1.fs-lg-6.fs-md-4.fs-3.my-4 Handshake infographic mass market crowdfunding iteration.
+      p.fs-1 Conversion angel investor entrepreneur first mover advantage. Handshake infographic mass market crowdfunding iteration. Traction stock user experience deployment beta innovator incubator focus. Sales user experience branding growth hacking holy grail monetization conversion prototype stock network effects. Learning curve network effects return on investment bootstrapping business-to-consumer.

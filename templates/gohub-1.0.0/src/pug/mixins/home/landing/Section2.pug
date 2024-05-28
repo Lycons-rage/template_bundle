@@ -1,0 +1,21 @@
+mixin Section2
+  +Section
+    .row.align-items-center
+      .col-md-6.mb-4
+        img.w-100(src=`${CWD}assets/img/illustration/5.png`  alt='...')
+      .col-md-6.text-center.text-md-start
+        h4.fs-3.fw-normal(data-zanim-xs!={delay: 0.3} data-zanim-trigger='scroll') Move the way you want, 
+          br
+          | Roads are open
+        p.fs-0.pe-xl-7(data-zanim-xs!={delay: 0.5} data-zanim-trigger='scroll') Opportunity is everything. Get out there and find it with Uber.
+        .d-flex.justify-content-center.align-item-center.my-3.mt-2
+          div
+            h4.fw-normal.fs-1 Route
+            p.my-1.fs-0.pe-xl-8 Route among the safe roads. Find what's waiting for you.
+          div
+            h4.fw-normal.fs-1 Share
+            p.my-1.fs-0.pe-xl-8 Your caring gets it's way. Let your people know.
+        button.btn.btn-sm.btn-primary.btn-bg-purple.my-4.me-1(href='#!' role='button') Get started
+        a.btn.btn-sm.my-2.btn-default(href='#' role='button') Questions? Talk to our team
+          i.fas.fa-arrow-right.ms-2
+    

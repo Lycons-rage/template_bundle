@@ -1,0 +1,18 @@
+append variables
+  - var items = ['intuitive process and single interface', 'Online and paperless', 'Real-time notification']
+mixin Autopilot
+  section.p-0#docs
+    +Background({image: `${CWD}assets/img/illustration/6.png`, attrs: { style: { 'background-position': 'right top', 'background-size': 'contain'} }, className: 'd-none d-lg-block' })
+    .container
+      .row.align-items-center
+        .col-12.col-lg-7.col-xl-5.text-lg-start.text-center
+          h1.fs-3.fw-normal.mt-6 Your finances on autopilot
+          p.fs-0 Gohub monitors application stability, so you can make data-driven decision on whether you should be building new features, or fixing bugs.
+      .row.align-items-center.mt-7
+          h4.fs-2.fw-normal Save Time
+          ul.list-unstyled.py-3
+            each item in items      
+              li.mb-3.text-900
+                span.far.fa-check-circle.text-700.me-2
+                =item 
+          

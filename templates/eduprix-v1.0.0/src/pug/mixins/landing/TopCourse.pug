@@ -1,0 +1,72 @@
+append variables
+  -
+    var courses= [
+      {
+        image:'art-masterclass.png',
+        logo:'moma.png',
+        title :'The Professional Art Masterclass',
+        text: 'The Museum of Modern Art',
+      },
+      {
+        image:'premiere.png',
+        logo:'moma.png',
+        title :'Premiere Pro CC for Beginners',
+        text: 'The Museum of Modern Art',
+      },
+      {
+        image:'electricity.png',
+        logo:'y.png',
+        title :'Electricity & Magnetism',
+        text: 'Duke University',
+      },
+      {
+        image:'chemistry.png',
+        logo:'school.png',
+        title :'School chemistry beta',
+        text: 'Duke University',
+      },
+      {
+        image:'oriental-art.png',
+        logo:'moma.png',
+        title :'Modernism in Oriental Art',
+        text: 'The Museum of Modern Art',
+      },
+      {
+        image:'visual-art.png',
+        logo:'cal-arts.png',
+        title :'Compositions in Visual Art',
+        text: 'The Museum of Modern Art',
+      },
+      {
+        image:'physics.png',
+        logo:'school-physics.png',
+        title :'High school physics',
+        text: 'The Museum of Modern Art',
+      },
+      {
+        image:'davinci.png',
+        logo:'moma.png',
+        title :'Color Grading with Da Vinci',
+        text: 'Duke University',
+      },
+    ];
+
+mixin Courses(config)
+  .col-sm-6.col-lg-3.mb-4
+    .card.border-0.h-100
+      .position-relative
+        img.w-100(src=`${CWD}assets/img/gallery/${config.image}` alt='courses')
+        .course-logo
+          img(src=`${CWD}assets/img/gallery/${config.logo}` alt='logo')
+        .ps-6
+          span.badge.bg-primary.rounded-0(style="padding: 11.1px 21px") Free
+      .card-body.px-0.py-3
+        h5.mb-0.font-sans-serif.fw-bold.fs-md-0.fs-lg-1!=config.title
+        a.text-muted.fs--1.stretched-link.text-decoration-none(href='#!')!=config.text    
+        
+mixin TopCourse 
+  +Section.py-6
+    .row 
+      h1.header-title.display-4.header.text-start.mb-5  TOP COURSES
+      each item in courses
+        +Courses(item)

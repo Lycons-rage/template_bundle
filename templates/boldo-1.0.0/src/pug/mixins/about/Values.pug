@@ -1,0 +1,31 @@
+mixin Values
+  -
+    const values = [
+      {
+        title:"We are commited.",
+        description:"Conversion angel investor entrepreneur first mover advantage. Handshake infographic mass market crowdfunding iteration.",
+        img:`${CWD}assets/img/values/1.png`
+      },
+      {
+        title:"We are responsible.",
+        description:"Conversion angel investor entrepreneur first mover advantage. Handshake infographic mass market crowdfunding iteration.",
+        img:`${CWD}assets/img/values/2.png`
+      },
+      {
+        title:"We aim for progress.",
+        description:"Conversion angel investor entrepreneur first mover advantage. Handshake infographic mass market crowdfunding iteration.",
+        img:`${CWD}assets/img/values/3.png`
+      },
+    ]
+  +Section.bg-dark
+    .px-xl-8.px-md-5.px-3
+      p.text-light.fs-1 Our values
+      h1.text-white.fs-lg-6.fs-md-4.fs-3.my-lg-4.my-3 Things in we believe
+      p.text-light.w-lg-75.fs-1 Conversion angel investor entrepreneur first mover advantage. Handshake infographic mass market crowdfunding iteration. Traction stock user experience deployment beta innovator incubator focus.
+      each value in values
+        .row.mt-5
+          .col-md-3
+            img(src=value.img, alt="").img-fluid
+          .col-md-9.mt-2.mb-md-0
+            h1.text-white.fs-2.fs-lg-3.my-2= value.title
+            p.text-light.fs-1= value.description

@@ -1,0 +1,68 @@
+append variables
+  -
+    var testimonials= [
+      {
+
+        image:'student-review.png',
+        name: `Emillie <br> Jonas`,
+        country : 'England',
+        text: `Eduprix is an ideal location for anybody who wants to learn something new or share what they know with others.  Eduprix is a worldwide platform for online learning that helps to connect with one another via knowledge. It comes highly recommended from my side. `,
+      },
+      {
+        image:'student-review.png',
+        name: 'Ainara <br> Vergara',
+        country : 'USA',
+        text: `Eduprix is an ideal location for anybody who wants to learn something new or share what they know with others.  Eduprix is a worldwide platform for online learning that helps to connect with one another via knowledge. It comes highly recommended from my side. `,
+      },
+      {
+        image:'student-review.png',
+        name: 'Niek <br> Bove',
+        country :'Bangladesh',
+        text:`Eduprix is an ideal location for anybody who wants to learn something new or share what they know with others.  Eduprix is a worldwide platform for online learning that helps to connect with one another via knowledge. It comes highly recommended from my side. `,
+      },
+
+    ];
+mixin Testimonial(config)
+  .col-auto.p-0 
+    .card.border-0.h-100
+      .card-body.h-100.p-0.pe-4
+        .d-flex.align-items-start 
+          img(src=`${CWD}assets/img/gallery/rectangle.png` alt="rectangle")
+          img(src=`${CWD}assets/img/gallery/${config.image}` alt="testimonials" width='315')
+
+  .col-md-5.col-lg-6.col-xl-7.mb-4
+    +Background({image: `${CWD}assets/img/gallery/quotation.png`, attrs: { style: { 'background-position': 'top center', 'background-size': 'auto',} }, className: 'z-index--1' })
+    h1.fw-normal.lh-1.mt-4.mt-lg-0!=config.name
+    h4.fw-light=config.country 
+    p.mt-4.pe-xxl-8=config.text
+
+mixin StudentReview
+  section#testimonial
+    .container
+      .row.justify-content-end
+        .col-2.position-xl-relative  
+          button.carousel-control-prev(type='button' data-bs-target='#carouselStudentReview' data-bs-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.visually-hidden Previous
+          button.carousel-control-next(type='button' data-bs-target='#carouselStudentReview' data-bs-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.visually-hidden Next
+      h1.header-title.display-4.header.text-start.mb-5  STUDENT REVIEW
+      .row.flex-center.h-100  
+        #carouselStudentReview.carousel.slide(data-bs-ride='carousel')
+          .carousel-inner.ps-4
+            .carousel-item.active
+              .row.h-100.align-items-center 
+                +Testimonial(testimonials[0])  
+            .carousel-item
+              .row.h-100.align-items-center 
+                +Testimonial(testimonials[1])  
+            .carousel-item
+              .row.h-100.align-items-center 
+                +Testimonial(testimonials[2])  
+          .row.justify-content-end
+            .col-auto
+              .carousel-indicators.position-relative
+                button.active(type='button' data-bs-target='#carouselStudentReview' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+                button(type='button' data-bs-target='#carouselStudentReview' data-bs-slide-to='1' aria-label='Slide 2')
+                button(type='button' data-bs-target='#carouselStudentReview' data-bs-slide-to='2' aria-label='Slide 3')

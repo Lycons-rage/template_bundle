@@ -1,0 +1,39 @@
+extends Layout
+include ../mixins/navbars/TopNAv
+//- include ../mixins/navbars/NavbarEduprix
+append variables
+  - var attrsBody = {  };
+  - var breakPoint = 'lg';
+ 
+
+
+append headScripts
+
+block prepend styles
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  //- link(href='https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+  link(href='https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap' rel='stylesheet')
+  link(href=`${CWD}vendors/prism/prism.css`, rel='stylesheet')
+
+
+  
+
+prepend scripts
+  script(src=`${CWD}vendors/fontawesome/all.min.js`)
+  script(src=`${CWD}vendors/lodash/lodash.min.js`)
+  script(src=`https://polyfill.io/v3/polyfill.min.js?features=window.scroll`)
+  //- script(src=`${CWD}vendors/imagesloaded/imagesloaded.pkgd.js`)
+  //- script(src=`${CWD}vendors/prism/prism.js`)
+  //- script(src=`https://smtpjs.com/v3/smtp.js`)
+
+  
+
+block mainContent
+  block content
+  
+
+
+//- block afterMainContent
+

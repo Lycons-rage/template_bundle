@@ -1,0 +1,33 @@
+mixin FirstOffer
+    +Section
+        .row.align-items-center
+            .col-lg-6.text-center.text-lg-start
+                img(src=`${CWD}assets/img/offer/1.png`, alt="").img-fluid
+            .col-lg-6
+                h1.fs-xl-5.fs-lg-4.fs-3 We connect our customers with the best, and help them keep up-and stay open.
+                ul.list-unstyled.my-xl-5.my-3
+                    each item in ["We connect our customers with the best.", "Advisor success customer launch party.", "Business-to-consumer long tail."]
+                        li.fs-2.my-4.d-flex.align-items-center.gap-3.text-black
+                            i(class="fa-solid fa-circle-check").fs-4.text-dark
+                            span= item
+                button.btn.btn-dark Start now
+
+
+//- second offer
+mixin SecondOffer
+    +Section.pt-8.pt-lg-0
+        .d-flex.flex-column-reverse.flex-lg-row
+            .col-lg-6
+                h1.fs-lg-4.fs-md-3.fs-xl-5.mb-5 We connect our customers with the best, and help them keep up-and stay open.
+                ul.list-unstyled
+                    li.fs-2.shadow-sm.offer-list-item
+                        i(class="fa-solid fa-leaf").fs-lg-4.fs-3
+                        span We connect our customers with the best.
+                    li.fs-2.shadow-sm.offer-list-item
+                        i(class="fa-solid fa-eye").fs-lg-4.fs-3
+                        span Advisor success customer launch party.
+                    li.fs-2.shadow-sm.offer-list-item
+                        i(class="fa-solid fa-sun").fs-lg-4.fs-3
+                        span Business-to-consumer long tail.
+            .col-lg-6.text-center.text-lg-end
+                img(src=`${CWD}assets/img/offer/2.png`, alt="").img-fluid

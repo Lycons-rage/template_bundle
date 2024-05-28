@@ -1,0 +1,29 @@
+mixin Navbar(navbarDark, pageTitle)
+    -
+        var navLinks = [
+            {
+                href:"index.html",
+                title:"Home"
+            },
+            {
+                href:"about.html",
+                title:"About"
+            },
+            {
+                href:"blogs.html",
+                title:"Blogs"
+            }
+        ]
+    nav.navbar.navbar-expand-lg.fixed-top.navbar-dark(data-navbar-on-scroll class=navbarDark? "": "bg-dark")
+        .container
+            a.navbar-brand(href="index.html")
+                img(src=`${CWD}assets/img/Logo.png`, alt="")
+            button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                i(class="fa-solid fa-bars").text-white.fs-3
+            .collapse.navbar-collapse#navbarSupportedContent
+                ul.navbar-nav.ms-auto.mt-2.mt-lg-0
+                    each link in navLinks
+                        li.nav-item
+                            a.nav-link(aria-current="page" href=link.href class= pageTitle === link.title ? "active" : "")= link.title
+                    li.nav-item.mt-2.mt-lg-0
+                        a.nav-link.btn.btn-light.text-black.w-md-25.w-50.w-lg-100(aria-current="page" href="#") Log In

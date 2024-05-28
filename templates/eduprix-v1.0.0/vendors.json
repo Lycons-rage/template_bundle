@@ -1,0 +1,27 @@
+{
+  "bootstrap": {
+    "src": ["dist/js/bootstrap.min.js", "dist/js/bootstrap.min.js.map"],
+    "dest": "bootstrap"
+  },
+ 
+  "is_js": {
+    "src": "is.min.js",
+    "dest": "is"
+  },
+
+  "@fortawesome/fontawesome-free": {
+    "src": "js/all.min.js",
+    "dest": "fontawesome"
+  },
+  
+  "countup.js": {
+    "src": "dist/countUp.umd.js",
+    "dest": "countup"
+  },
+ 
+  "swiper": {
+    "src": ["swiper-bundle.min.js","swiper-bundle.min.js.map","swiper-bundle.min.css"],
+    "dest": "swiper"
+  }
+ 
+}

@@ -1,0 +1,105 @@
+append variables
+  -
+    var featuresnew= [
+      {
+        icon:`4.png`,
+        title:'High Conversions',
+        alt: 'Dashboard',
+        details: 'Convert more wesite visitors in signups ans purchases.'
+      },
+      {
+        icon:`5.png`,
+        title:'Save on Acquisition',
+        alt: 'Comment',
+        details: 'Your advertising spend will go further than ever before.'
+      },
+      {
+        icon:`6.png`,
+        title:'Increase Trust',
+        alt: 'Tailored',
+        details: 'People trust companies they see other people buy.'
+      },
+      {
+        icon:`7.png`,
+        title:'Social Influence',
+        alt: 'Dashboard',
+        details: 'Seeing other visitor taking action creates fear of missing out.'
+      },
+      {
+        icon:`8.png`,
+        title:'Activity Notifications',
+        alt: 'Dashboard',
+        details: 'Display recent sales and opt-ins on your pages and drive visitors.'
+      },
+      {
+        icon:`9.png`,
+        title:'Custom Journeys',
+        alt: 'Dashboard',
+        details: 'Take your journey with ease and comfort of different level.'
+      },
+      {
+        icon:`10.png`,
+        title:'Custom Timing',
+        alt: 'Dashboard',
+        details: 'Control how fast your notification will display on your screen'
+      },
+      {
+        icon:`11.png`,
+        title:'Live Visitor Count',
+        alt: 'Dashboard',
+        details: 'Show how many visitors are browing your site in a time'
+      },
+      {
+        icon:`12.png`,
+        title:'Visitor Identification',
+        alt: 'Dashboard',
+        details: 'We will show you detailed profiles of every visitor of the site.'
+      },
+      {
+        icon:`13.png`,
+        title:'Custom Rules',
+        alt: 'Dashboard',
+        details: 'Granular control over the notification of your activity.'
+      },
+      {
+        icon:`14.png`,
+        title:'Mobile Optimized',
+        alt: 'Dashboard',
+        details: 'Optimize the traffic to bring the best to your project.'
+      },
+      {
+        icon:`15.png`,
+        title:'Language Translation',
+        alt: 'Dashboard',
+        details: 'Translate recent activity notification into any language.'
+      }
+    ];
+mixin NewFeatureItem(item) 
+  .col-md-6.col-lg-3.text-center
+    img(src=`${CWD}assets/img/icons/${item.icon}` alt=`${item.alt}` style={width:'95px'})
+    h4.mt-3.lh-base #{item.title}
+    p.fs-0 #{item.details}
+        
+mixin Features
+  +Section#customers
+    h1.text-center.display-5.fw-semi-bold(data-zanim-xs!={delay: 0.3} data-zanim-trigger='scroll')   Proof makes increasing conversion simple
+    p.text-center.fs-0.fs-md-1(data-zanim-xs!={delay: 0.5} data-zanim-trigger='scroll')  Getting a conversion boost didn't used to be this easy. Luckily, you found Proof. Now 
+      br.d-none.d-lg-block
+      | you have the tools to let your customer do the selling for you.
+    .row.mb-4.mt-6
+      +NewFeatureItem(featuresnew[0])
+      +NewFeatureItem(featuresnew[1]) 
+      +NewFeatureItem(featuresnew[2])
+      +NewFeatureItem(featuresnew[3])
+    .row.mb-6
+      +NewFeatureItem(featuresnew[4]) 
+      +NewFeatureItem(featuresnew[5])
+      +NewFeatureItem(featuresnew[6])
+      +NewFeatureItem(featuresnew[7])
+    .row.mb-6
+      +NewFeatureItem(featuresnew[8]) 
+      +NewFeatureItem(featuresnew[9])
+      +NewFeatureItem(featuresnew[10])
+      +NewFeatureItem(featuresnew[11])
+  
+

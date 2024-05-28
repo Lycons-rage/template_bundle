@@ -1,0 +1,22 @@
+mixin Section1
+  +Section#pricing
+    .row.flex-center
+      .col-md-6.text-center.text-md-start
+        h4.fw-normal.fs-3(data-zanim-xs!={delay: 0.3} data-zanim-trigger='scroll') Your safety is always 
+          br
+          |a top priority
+        p.fs-0.pe-xl-8(data-zanim-xs!={delay: 0.5} data-zanim-trigger='scroll') We are committed to help drivers and riders get where they want to go with confidence
+        .d-flex.justify-content-space-between.align-item-center.my-3.mt-2
+          div
+            h4.fw-normal.fs-1 Drive
+            p.my-1.fs-0.pe-xl-8 Drive when you want. Find ooprtunities around you.
+          div
+            h4.fw-normal.fs-1 Ride
+            p.my-1.fs-0.pe-xl-8 Tap your phone. Get where you're headed
+        button.btn.btn-sm.btn-primary.my-4.me-1(href='#!' role='button') Get started
+        a.btn.btn-sm.my-2.btn-default(href='#' role='button') Questions? Talk to our team
+          i.fas.fa-arrow-right.ms-2
+      .col-md-6.mb-4
+        img.w-100(src=`${CWD}assets/img/illustration/4.png`  alt='...')
+        
+          

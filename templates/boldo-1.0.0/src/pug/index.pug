@@ -1,0 +1,31 @@
+extends layouts/LayoutTheme
+include mixins/home/Hero
+include mixins/home/Services
+include mixins/home/Offers
+include mixins/home/Reviews
+include mixins/home/FAQ
+include mixins/home/Blogs
+
+
+
+
+append variables
+  -
+    var pageInfo = {
+      pageTitle: 'Home',
+    }
+
+
+append styles
+
+prepend scripts
+
+
+block content
+  +Hero
+  +Services
+  +FirstOffer
+  +SecondOffer
+  +Reviews
+  +FAQ
+  +Blogs

@@ -1,0 +1,128 @@
+append variables
+  -
+    var instructor= [
+      {
+        image:'john.png',
+        name:`John S. <br> Sergent`,
+        designation:'Head of Data Science',
+      },
+      {
+        image:'albrecht.png',
+        name:`Albrecht <br> Kachher`,
+        designation:'Developer and Lead Instructor',
+      },
+      {
+        image:'peter.png',
+        name:`Peter P. <br> Rubens`,
+        designation:'Digital Marketing Expart',
+      },
+      {
+        image:'david.png',
+        name: `David A. <br> Sequiros`,
+        designation:'Engineering Architect',
+      },
+      {
+        image:'david.png',
+        name: `David A. <br> Sequiros`,
+        designation:'Head of Data Science',
+      },
+      {
+        image:'john.png',
+        name: `David A. <br> Sequiros`,
+        designation:'Head of Data Science',
+      },
+      {
+        image:'john.png',
+        name: `David A. <br> Sequiros`,
+        designation:'Head of Data Science',
+      },
+      {
+        image:'john.png',
+        name: `David A. <br> Sequiros`,
+        designation:'Head of Data Science',
+      },
+      {
+        image:'john.png',
+        name: `David A. <br> Sequiros`,
+        designation:'Head of Data Science',
+      },
+      {
+        image:'john.png',
+        name: `David A. <br> Sequiros`,
+        designation:'Head of Data Science',
+      },
+      {
+        image:'john.png',
+        name: `David A. <br> Sequiros`,
+        designation:'Head of Data Science',
+      },
+      {
+        image:'john.png',
+        name: `David A. <br> Sequiros`,
+        designation:'Head of Data Science',
+      },
+    ];
+mixin Slider(config)
+  .text-center.product
+    img.w-100.photograph(src=`${CWD}assets/img/gallery/${config.image}`  alt='')
+    h3.fw-normal.font-base.lh-1.text-black.mt-3 !{config.name}
+    p.mb-0 !{config.designation}
+
+
+mixin Instructors
+  +Section
+    .row
+      .col-12
+        h1.header-title.display-4.header.text-center.mb-5  MEET OUR INSTRUCTORS
+        .swiper-custom-container
+          .swiper-container.theme-slider(data-swiper!={
+            spaceBetween: 1,
+            slideToClickedSlide: true,
+            slidesPerView: 1,
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+              bulletActiveClass:'bullet-active'
+            },
+            breakpoints: {
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 20
+              },
+              480: {
+                slidesPerView: 2,
+                spaceBetween: 30
+              },
+              640: {
+                slidesPerView: 4,
+                spaceBetween: 40
+              }
+            }
+          })
+            .swiper-wrapper
+              .swiper-slide
+                +Slider(instructor[0]) 
+              .swiper-slide
+                +Slider(instructor[1]) 
+              .swiper-slide
+                +Slider(instructor[2]) 
+              .swiper-slide
+                +Slider(instructor[3])
+              .swiper-slide
+                +Slider(instructor[0]) 
+              .swiper-slide
+                +Slider(instructor[1]) 
+              .swiper-slide
+                +Slider(instructor[2]) 
+              .swiper-slide
+                +Slider(instructor[3])    
+            .swiper-pagination.position-static.d-flex.justify-contnet-evenly.mx-2.my-5 
+            .d-flex.justify-content-sm-end.justify-content-center.mt-sm-n7.m-5
+              a.link.fw-normal.fs-2(href="#!")  See all  
+           
+          .swiper-button-next.d-none.d-sm-block
+            svg.bi.bi-arrow-right(xmlns='http://www.w3.org/2000/svg' width='42' height='27' fill='currentColor' viewBox='0 0 16 16')
+              path(fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z')
+          .swiper-button-prev.d-none.d-sm-block
+            svg.bi.bi-arrow-left(xmlns='http://www.w3.org/2000/svg' width='42' height='27' fill='currentColor' viewBox='0 0 16 16') 
+              path(fill-rule='evenodd' d='M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z')

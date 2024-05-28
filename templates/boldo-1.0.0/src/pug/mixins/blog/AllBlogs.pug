@@ -1,0 +1,72 @@
+mixin AllBlogs
+  -
+    var blogs = [
+      {
+          img:`${CWD}assets/img/blog/1.png`,
+          title:"Pitch termsheet backing validation focus release.",
+          category:"Category",
+          date:"November 22, 2021",
+          name:"Chandler Bing",
+          avatar:`${CWD}assets/img/blog/profile1.png`,
+      },
+      {
+          img:`${CWD}assets/img/blog/2.png`,
+          title:"Seed round direct mailing non-disclosure agreement graphical user interface rockstar.",
+          category:"Category",
+          date:"November 22, 2021",
+          name:"Rachel Green",
+          avatar:`${CWD}assets/img/blog/profile2.png`,
+      },
+      {
+          img:`${CWD}assets/img/blog/3.png`,
+          title:"Beta prototype sales iPad gen-z marketing network effects value proposition",
+          category:"Category",
+          date:"November 22, 2021",
+          name:"Monica Geller",
+          avatar:`${CWD}assets/img/blog/profile3.png`,
+      },
+      {
+          img:`${CWD}assets/img/blog/4.png`,
+          title:"Pitch termsheet backing validation focus release.",
+          category:"Category",
+          date:"November 22, 2021",
+          name:"Chandler Bing",
+          avatar:`${CWD}assets/img/blog/profile1.png`,
+      },
+      {
+          img:`${CWD}assets/img/blog/5.png`,
+          title:"Seed round direct mailing non-disclosure agreement graphical user interface rockstar.",
+          category:"Category",
+          date:"November 22, 2021",
+          name:"Rachel Green",
+          avatar:`${CWD}assets/img/blog/profile2.png`,
+      },
+      {
+          img:`${CWD}assets/img/blog/6.png`,
+          title:"Beta prototype sales iPad gen-z marketing network effects value proposition",
+          category:"Category",
+          date:"November 22, 2021",
+          name:"Monica Geller",
+          avatar:`${CWD}assets/img/blog/profile3.png`,
+      },
+    ]
+  +Section.py-0
+    h1.fs-lg-6.fs-md-5.fs-3 Letest News
+    .row.mt-5.gx-xl-7
+      each blog in blogs
+        .col-lg-4.col-md-6.mb-5.mb-md-0.text-center.text-md-start.h-auto
+          .d-flex.justify-content-between.flex-column.h-100
+            a(href="#")
+              img(src=blog.img, alt="").w-md-100.w-75.rounded-2
+            .d-flex.align-items-center.justify-content-center.justify-content-md-start.gap-2.mt-3
+              a(href="#")
+                p.fw-bold.mb-0.text-black= blog.category
+              p.mb-0= blog.date
+            a(href="#")
+              h5.mt-1.mb-3.fs-0.fs-md-1= blog.title
+            .d-flex.align-items-center.justify-content-center.justify-content-md-start.gap-3.mb-md-5
+              img(src=blog.avatar, alt="").img-fluid
+              a(href="#")
+                p.mb-0.text-gray= blog.name
+    .text-center.mb-4
+      button.btn.btn-outline-dark Load More

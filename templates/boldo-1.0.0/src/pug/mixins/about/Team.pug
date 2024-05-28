@@ -1,0 +1,31 @@
+mixin Team
+  -
+    const team = [
+      {
+        name:"Michael Scott",
+        designation:"General Manager",
+        img: `${CWD}assets/img/team/1.png`
+      },
+      {
+        name:"Dwight Schrute",
+        designation:"General Manager",
+        img: `${CWD}assets/img/team/2.png`
+      },
+      {
+        name:"Pam Beetsley",
+        designation:"General Manager",
+        img: `${CWD}assets/img/team/3.png`
+      },
+    ]
+  +Section
+    .px-xl-8.px-md-5.px-3
+      p.text-gray.fs-1 Our team
+      h1.text-black.fs-lg-6.fs-md-4.fs-3.my-4 The leadership team
+      p.text-gray.fs-1.w-lg-75 Conversion angel investor entrepreneur first mover advantage. Handshake infographic mass market crowdfunding iteration. Traction stock user experience deployment beta innovator incubator focus.
+    .row.mt-7
+      each member in team
+        .col-md-4.col-sm-6.mb-5.mb-lg-0.text-center.text-sm-left
+          a(href="#")
+            img(src=member.img, alt="").img-fluid
+          h1.fs-3.mt-3= member.name
+          p.fs-1= member.designation

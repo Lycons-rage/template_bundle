@@ -1,0 +1,31 @@
+extends LayoutTheme 
+include ../mixins/documentation/DocumentationNav
+//- include ../mixins/common/card
+
+append variables
+  - var CWD = '../';
+
+prepend styles
+  link(href=`${CWD}vendors/prism/prism.css`, rel='stylesheet')
+
+prepend scripts
+  script(src=`${CWD}vendors/prism/prism.js`)
+
+
+block beforeMainContent
+  //- +FancyNav(false, false, 'bg-black')
+
+append mainContent
+  +Section.bg-light.pt-8.pb-7.pt-lg-6.pb-lg-5.pt-xl-8.pb-xl-7
+    .row
+      .col-lg-6.col-xl-5
+        h1.fs-3.fs-sm-4 #{pageTitle || 'Component'}
+        p.lead #{pageDes || 'These modular elements can be readily used and customized in every layout across pages.'}
+
+  +Section.py-0.bg-white
+    .row.justify-content-between
+      .col.d-none.d-lg-block
+        .position-sticky.top-0.py-6
+          +DocumentationNav
+      .col-lg-10.py-6
+        block  mainContent

@@ -1,0 +1,36 @@
+/*-----------------------------------------------
+|   Form
+-----------------------------------------------*/
+.input-group{
+  position: relative;
+  .input-box{
+    padding-left: 2.2rem;
+    vertical-align: middle;
+  }
+  .input-box-icon{
+    position: absolute;
+    top:50%;
+    // left: 19.9rem;
+    transform: translateY(-50%);
+  }
+}
+
+.form-eduprix-control{
+  padding: .775rem 1.8rem;
+  font-weight: $font-weight-normal;
+  font-size: map-get($font-sizes, -1);
+  border-radius: 0;
+  &:active,
+    &:focus {
+      color: $secondary;
+    }
+}
+
+.form-eduprixsearch-control{
+  padding: .375rem 2.5rem;
+  border: $primary;
+  &:active,
+  &:focus {
+    color: $gray-300;
+  }
+}

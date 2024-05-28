@@ -1,0 +1,12 @@
+mixin Promo
+  +Section("container bg-dark overflow-hidden rounded-1")
+    +Background({
+      image: `${CWD}assets/img/promo/promo-bg.png`,
+    })
+    .px-5.py-7.position-relative
+      h1.text-center.w-lg-75.mx-auto.fs-lg-6.fs-md-4.fs-3.text-white An enterprise template to ramp up your company website
+      .row.justify-content-center.mt-5
+        .col-auto.w-100.w-lg-50
+          input(type='email', placeholder="Your email address").form-control.mb-2.border-light.fs-1
+        .col-auto.mt-2.mt-lg-0
+          button.btn.btn-success.text-dark.fs-1 Start now

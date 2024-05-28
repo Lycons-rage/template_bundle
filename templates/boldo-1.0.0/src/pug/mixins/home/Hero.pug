@@ -1,0 +1,62 @@
+mixin Hero
+  .bg-dark
+    img(src=`${CWD}assets/img/hero/hero-bg.png`, alt="").img-fluid.position-absolute.end-0
+    +Section
+      .row.align-items-center.py-lg-8.py-6
+        .col-lg-6.text-center.text-lg-start
+          h1.text-white.fs-5.fs-xl-6 Save time by building fast with Boldo Template
+          p.text-white.py-lg-3.py-2 Funding handshake buyer business-to-business metrics iPad partnership. First mover advantage innovator success deployment non-disclosure.
+          .d-sm-flex.align-items-center.gap-3
+            button.btn.btn-success.text-black.mb-3.w-75 Buy Template
+            button.btn.btn-outline-light.mb-3.w-75 Explore
+        .col-lg-6.text-center.text-lg-end.mt-3.mt-lg-0
+            img(src=`${CWD}assets/img/hero/hero-graphics.png`, alt="").img-fluid
+      .swiper
+        .swiper-container.swiper-shadow.swiper-theme(data-swiper!={
+              slidesPerView: 2,
+              breakpoints: {
+              640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+              },
+              992: {
+                slidesPerView: 5,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 50,
+              },
+              1025: {
+                slidesPerView: 6,
+                spaceBetween: 50,
+              },
+              },
+              spaceBetween: 10,
+              grabCursor: true,
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+              loop: true,
+              freeMode: true,
+              autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+              },
+            })
+            .swiper-wrapper
+              +SwiperSlideImg(`${CWD}assets/img/logos/boldo.png`)
+              +SwiperSlideImg(`${CWD}assets/img/logos/presto.png`)
+              +SwiperSlideImg(`${CWD}assets/img/logos/boldo.png`)
+              +SwiperSlideImg(`${CWD}assets/img/logos/presto.png`)
+              +SwiperSlideImg(`${CWD}assets/img/logos/boldo.png`)
+              +SwiperSlideImg(`${CWD}assets/img/logos/presto.png`)
+
+mixin SwiperSlideImg(imgSrc)
+  .swiper-slide.text-center
+    img(src=imgSrc, alt="")

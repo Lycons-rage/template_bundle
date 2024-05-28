@@ -1,0 +1,49 @@
+/*-----------------------------------------------
+|   Card
+-----------------------------------------------*/
+.card{
+  border-radius: 0;
+  border: 0;
+}
+.card-link {
+  font-size: map_get($font-sizes, "-1");
+  font-weight: $font-weight-semi-bold;
+}
+.card-hover{
+  transform: translateY(0) translateZ(0);
+  transition: all 0.3s ease-out;
+  background-color:#2257BF;
+  border:0;
+  .icon-box{
+    .eduprix-icon-hover{
+      display:none;
+    }
+    
+    .eduprix-icon{
+      display: block;
+      margin-left:auto;
+      margin-right:auto;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $primary;
+    .explore-link{
+      color: $secondary;
+      text-decoration: none;
+    }
+    .eduprix-icon{
+      display: none;
+    }
+    .eduprix-icon-hover{
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    
+  }
+
+}
+
+

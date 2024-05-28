@@ -1,0 +1,14 @@
+.header-title-explore{
+    color: #00B2FF;
+    -webkit-text-fill-color: #003294; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #00B2FF;
+  }
+  
+  @supports (-webkit-text-stroke: 1px #00B2FF) {
+    .header-title-explore{
+      -webkit-text-stroke: 1px #00B2FF;
+      -webkit-text-fill-color: #003294;
+    }
+  }
+  
